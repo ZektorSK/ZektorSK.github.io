@@ -1,4 +1,4 @@
-# modal-project
+# VOXEL PORTFOLIO
 
 ## Project setup
 ```
