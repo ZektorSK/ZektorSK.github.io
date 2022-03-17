@@ -18,20 +18,28 @@ export default {
   data(){
     return{
       comp: AboutX,
-      voxelsList: this.retrieveJSON()
+      voxelsList:
+      [
+        {
+            id:0,
+            source:"/voxels/0.png",
+            name:"Barcelona",
+            description:"My first ever city done in the CryptoCities project. The capital of Spain with it's majestic cathedral and sophisticated street layout."
+        },
+        {
+            id:1,
+            source:"/voxels/1.png",
+            name:"Beijing",
+            description:"No description yet."
+        }
+
+      ]
     }
   },
 
   methods:{
     swapComponent(icomp){
       this.comp = icomp;
-    },
-
-    retrieveJSON(){
-      const jsonData = require('./json/voxels.json');
-      const jsonObjectArray = jsonData.voxel_cities;
-
-      return jsonObjectArray;
     },
 
   }

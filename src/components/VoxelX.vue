@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center justify-items-center">
         <div id="image w-80 h-80">
-            <img src="{{voxel.source}}">
+            <img :src="voxel.source">
         </div>
         <div id="text-container">
             <div id="description">
@@ -31,7 +31,7 @@ export default {
             const randObject = this.voxelsList[randIndex];
 
             return randObject;
-        }
+        },
     }
 
 }
