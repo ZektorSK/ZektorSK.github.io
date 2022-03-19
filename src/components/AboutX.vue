@@ -1,14 +1,30 @@
 <template>
-    <div class="flex justify-center items-center h-screen">
-        <img src="../assets/viking.png" class="h-60 w-60 block rounded-lg brightness-110">
-        <article class="text-2xl font-sans text-center shadow-md p-5">
-            <p>My name is Daniel, I am 19 years old from Slovakia and I make <b class="font-semibold">voxel art</b> for 2 years now</p>
+    <div class="flex justify-center items-center h-screen gap-[100px]">
+        <figure>
+            <img src="../assets/bg.png" class="w-[500px] h-[500px] border-4 border-gray-300">
+            <figcaption class="text-white font-mono font-light">A Cyberpunk inspired city</figcaption>
+        </figure>
+
+        <div class="text-center text-white w-[700px] shadow-lg">
+            <h1 class="text-5xl font-serif underline underline-offset-4">Hello There!</h1>
             <br>
-            <p>I spent most of the time on the CryptoCities project, where I have created a lot of cities</p>
+
+            <p class="font-mono text-xl font-light">My name is Daniel and I make voxel art for 2 years now.</p>
             <br>
-            <p>This website was coded entirely by me</p>
+            <p class="font-mono text-xl font-light">I made this site to display my skills as a voxel artist and also as an aspiring web developer.</p>
             <br>
-            <hr>
-        </article>
+            <p class="font-mono text-xl font-light">The projects shown here come from the CryptoCities collection which I have worked on as an artist.</p>
+            <br>
+            <br>
+
+            <div class="flex shadow-lg">
+                <p class="font-mono text-xl font-light text-left">Contact:</p> 
+                <img src="../assets/discord.png" class="w-8 h-8 ml-2">
+                <p class="font mono text-sm mt-1 text-indigo-200 font-semibold">Zektor#9367</p>
+
+                <img src="../assets/mail.png" class="w-8 h-8 ml-2">
+                <p class="font mono text-sm mt-1 text-white font-bold">dankomajchrak423@gmail.com</p>
+            </div>
+        </div>
     </div>
 </template>

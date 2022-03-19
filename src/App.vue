@@ -1,5 +1,5 @@
 <template>
-  <HeaderX @swapComponent="swapComponent"/>
+  <HeaderX @swapComponent="swapComponent" :comp="comp" />
   <component :is="comp" :voxelsList="voxelsList"></component>
 </template>
 
