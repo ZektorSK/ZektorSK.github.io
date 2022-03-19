@@ -1,5 +1,5 @@
 <template>
-    <header class="flex max-width h-16 backdrop-blur-[90px] border-b-2 drop-shadow-lg">
+    <header class="flex max-width h-16 backdrop-blur-[90px] border-b-2 drop-shadow-lg bg-slate-900">
 
         <img src="../assets/avatar.png" class="m-2 ml-20 border-2">
         <h1 class="text-slate-100 m-2 ml-20 mt-5 text-3xl font-serif font-medium">Voxel Art Portfolio Site</h1>

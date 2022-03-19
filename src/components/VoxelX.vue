@@ -1,7 +1,7 @@
 <template>
-    <div class="flex justify-center justify-items-center h-screen grow-0 shrink-0">
+    <div class="flex justify-center justify-items-center h-screen grow-0 shrink-0 text-white">
         <div id="image" class="mr-[100px] pb-[60px] flex justify-center justify-items-center items-center h-screen">
-            <img :src="voxel.source" class="w-[650px] h-[650px] rounded-full">
+            <img :src="voxel.source" class="w-[650px] h-[650px] border-4 border-white">
         </div>
         <div id="description" class="h-[300px] w-[700px] mt-[250px] p-3 flex justify-center justify-items-center items-center shadow-md flex-col">
             <div id="head" class="flex justify-center justify-items-center items-center flex-row underline decoration-4 underline-offset-8">
@@ -30,6 +30,7 @@ export default {
             const randIndex = Math.floor(Math.random() * Object.keys(this.voxelsList).length);
             const randObject = this.voxelsList[randIndex];
 
+            this.changeBG(randObject);
             return randObject;
         },
         goLeft(i_id){
@@ -52,6 +53,10 @@ export default {
                 this.voxel = this.voxelsList[0];
                 console.log("I went to the beginning!");
             }
+        },
+        changeBG(i_voxel){
+            const url_toblur = i_voxel.source.slice(0, 7) + '/blur' + i_voxel.source.slice(7);
+            document.querySelector('body').setAttribute('style', `background-image: url(${CSS.escape(url_toblur)});`);
         }
     }
 

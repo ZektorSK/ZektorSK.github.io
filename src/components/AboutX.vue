@@ -2,10 +2,10 @@
     <div class="flex justify-center items-center h-screen gap-[100px]">
         <figure>
             <img src="../assets/bg.png" class="w-[500px] h-[500px] border-4 border-gray-300">
-            <figcaption class="text-white font-mono font-light">A Cyberpunk inspired city</figcaption>
+            <figcaption class="text-white font-mono font-light">A Cyberpunk inspired street</figcaption>
         </figure>
 
-        <div class="text-center text-white w-[700px] shadow-lg">
+        <div class="text-center text-white w-[700px] shadow-lg ">
             <h1 class="text-5xl font-serif underline underline-offset-4">Hello There!</h1>
             <br>
 
@@ -18,7 +18,7 @@
             <br>
 
             <div class="flex shadow-lg">
-                <p class="font-mono text-xl font-light text-left">Contact:</p> 
+                <p class="font-mono text-xl font-light text-left text-white">Contact:</p> 
                 <img src="../assets/discord.png" class="w-8 h-8 ml-2">
                 <p class="font mono text-sm mt-1 text-indigo-200 font-semibold">Zektor#9367</p>
 
