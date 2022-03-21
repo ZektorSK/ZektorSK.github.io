@@ -9,7 +9,7 @@
             <button @click="$emit('swapComponent', 'VoxelX')" class="p-2 font-mono shadow-md text-3xl font-bold uppercase hover:bg-slate-50 hover:text-slate-800 cursor-pointer border-2" :class="{'bg-slate-50' : comp==='VoxelX', 'text-slate-800' : comp==='VoxelX'}">Voxel</button>
           </li>
           <li>
-            <button @click="$emit('swapComponent', 'AboutX')" class="p-2 font-mono shadow-md text-3xl font-bold uppercase hover:bg-slate-50 hover:text-slate-800 cursor-pointer border-2" :class="{'bg-slate-50' : comp==='AboutX', 'text-slate-800' : comp==='AboutX'}">About</button>
+            <button @click="$emit('swapComponent', 'AboutX'), changeBGtoDefault()" class="p-2 font-mono shadow-md text-3xl font-bold uppercase hover:bg-slate-50 hover:text-slate-800 cursor-pointer border-2" :class="{'bg-slate-50' : comp==='AboutX', 'text-slate-800' : comp==='AboutX'}">About</button>
           </li>
         </ul>
 
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  props: ['comp']
+  props: ['comp'],
+  methods:{
+    changeBGtoDefault(){
+      document.querySelector('body').setAttribute('style', 'background-image: url(./voxels/blur/bg_blur.png);');
+    }
+  }
 }
 </script>
 
