@@ -65,7 +65,8 @@ export default {
             }
         },
         changeBG(i_voxel){
-            const url_toblur = i_voxel.source.slice(0, 7) + '/blur' + i_voxel.source.slice(7);
+            const url_toblur = i_voxel.source.slice(0, -4) + '_blur.png';
+            console.log(`og: ${i_voxel.source}\nblurred: ${url_toblur}`);
             document.querySelector('body').setAttribute('style', `background-image: url(${CSS.escape(url_toblur)});`);
         },
         changeCircle(id){
@@ -81,6 +82,7 @@ export default {
 
     mounted(){
         this.changeCircle(this.voxel.id);
+
     }
 }
 </script>
