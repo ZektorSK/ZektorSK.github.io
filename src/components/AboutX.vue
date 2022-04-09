@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center items-center h-screen gap-[100px]">
         <figure>
-            <img src="/bg.png" class="w-[500px] h-[500px] border-4 border-gray-300">
+            <img src="../assets/bg.png" class="w-[500px] h-[500px] border-4 border-gray-300">
             <figcaption class="text-white font-mono font-light">A Cyberpunk inspired street</figcaption>
         </figure>
 
@@ -19,10 +19,10 @@
 
             <div class="flex shadow-lg">
                 <p class="font-mono text-xl font-light text-left text-white">Contact:</p> 
-                <img src="/discord.png" class="w-8 h-8 ml-2">
+                <img src="../assets/discord.png" class="w-8 h-8 ml-2">
                 <p class="font mono text-sm mt-1 text-indigo-200 font-semibold">Zektor#9367</p>
 
-                <img src="/mail.png" class="w-8 h-8 ml-2">
+                <img src="../assets/mail.png" class="w-8 h-8 ml-2">
                 <p class="font mono text-sm mt-1 text-white font-bold">dankomajchrak423@gmail.com</p>
             </div>
         </div>

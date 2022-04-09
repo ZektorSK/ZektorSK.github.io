@@ -2,16 +2,16 @@
     <div class="flex justify-center justify-items-center h-screen grow-0 shrink-0 text-white">
 
         <div id="image" class="mr-[80px] pb-[60px] flex justify-center justify-items-center items-center h-screen">
-            <img src="/arrow.png" class="reverse-arrow h-[70px] w-[100px] cursor-pointer" @click="removeCircle(this.voxel.id); goLeft(this.voxel.id); changeBG(this.voxel); changeCircle(this.voxel.id)">
+            <img src="../assets/arrow.png" class="reverse-arrow h-[70px] w-[100px] cursor-pointer" @click="removeCircle(this.voxel.id); goLeft(this.voxel.id); changeBG(this.voxel); changeCircle(this.voxel.id)">
             <img :src="voxel.source" class="w-[650px] h-[650px] border-4 border-white">
-            <img src="/arrow.png" class="h-[70px] w-[100px] cursor-pointer" @click="removeCircle(this.voxel.id); goRight(this.voxel.id); changeBG(this.voxel); changeCircle(this.voxel.id)">
+            <img src="../assets/arrow.png" class="h-[70px] w-[100px] cursor-pointer" @click="removeCircle(this.voxel.id); goRight(this.voxel.id); changeBG(this.voxel); changeCircle(this.voxel.id)">
         </div>
 
         <div id="description" class="h-[500px] w-[700px] mt-[200px] p-3 flex justify-center justify-items-center items-center shadow-md flex-col">
 
             <ul class="flex justify-center flex-row gap-2 mb-6">
-                <li v-for="(voxl, index) in voxelsList" :key="voxl">
-                    <img src="/circle_empty.png" class="w-[20px] h-[20px] cursor-pointer" :id="index" @click="removeCircle(this.voxel.id); changePosition(voxl); changeCircle(voxl.id); changeBG(voxl)">
+                <li v-for="(voxl, index) in voxelsList" :key="voxl.id">
+                    <img src="../assets/circle_empty.png" class="w-[20px] h-[20px] cursor-pointer" :id="index" @click="removeCircle(this.voxel.id); changePosition(voxl); changeCircle(voxl.id); changeBG(voxl)">
                 </li>
             </ul>
 
@@ -65,15 +65,13 @@ export default {
             }
         },
         changeBG(i_voxel){
-            const url_toblur = i_voxel.source.slice(0, -4) + '_blur.png';
-            console.log(`og: ${i_voxel.source}\nblurred: ${url_toblur}`);
-            document.querySelector('body').setAttribute('style', `background-image: url(${CSS.escape(url_toblur)});`);
+            document.body.setAttribute('style', `background-image: url(${CSS.escape(i_voxel.blur_source)});`);
         },
         changeCircle(id){
-            document.getElementById(id).setAttribute('src', '/circle_full.png');
+            document.getElementById(id).setAttribute('src', '../assets/circle_full.png');
         },
         removeCircle(id){
-            document.getElementById(id).setAttribute('src', '/circle_empty.png');
+            document.getElementById(id).setAttribute('src', '../assets/circle_empty.png');
         },
         changePosition(voxl){
             this.voxel = voxl;
