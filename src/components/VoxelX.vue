@@ -11,7 +11,7 @@
 
             <ul class="flex justify-center flex-row gap-2 mb-6">
                 <li v-for="(voxl, index) in voxelsList" :key="voxl.id">
-                    <img src="../assets/circle_empty.png" class="w-[20px] h-[20px] cursor-pointer" :id="index" @click="removeCircle(this.voxel.id); changePosition(voxl); changeCircle(voxl.id); changeBG(voxl)">
+                    <img :src="require('../assets/circle_empty.png')" class="w-[20px] h-[20px] cursor-pointer" :id="index" @click="removeCircle(this.voxel.id); changePosition(voxl); changeCircle(voxl.id); changeBG(voxl)">
                 </li>
             </ul>
 
@@ -24,6 +24,9 @@
 </template>
 
 <script>
+import circleFullLink from '../assets/circle_full.png'
+import circleEmptyLink from '../assets/circle_empty.png'
+
 export default {
 
     props:['voxelsList'],
@@ -68,10 +71,10 @@ export default {
             document.body.setAttribute('style', `background-image: url(${CSS.escape(i_voxel.blur_source)});`);
         },
         changeCircle(id){
-            document.getElementById(id).setAttribute('src', '../assets/circle_full.png');
+            document.getElementById(id).setAttribute('src', circleFullLink);
         },
         removeCircle(id){
-            document.getElementById(id).setAttribute('src', '../assets/circle_empty.png');
+            document.getElementById(id).setAttribute('src', circleEmptyLink);
         },
         changePosition(voxl){
             this.voxel = voxl;

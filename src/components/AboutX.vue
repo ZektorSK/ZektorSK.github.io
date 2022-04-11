@@ -20,10 +20,10 @@
             <div class="flex shadow-lg">
                 <p class="font-mono text-xl font-light text-left text-white">Contact:</p> 
                 <img src="../assets/discord.png" class="w-8 h-8 ml-2">
-                <p class="font mono text-sm mt-1 text-indigo-200 font-semibold">Zektor#9367</p>
+                <a class="font mono text-sm mt-1 text-indigo-200 font-semibold" href="https://www.discord.com/users/175304480169000961/" target="_blank">Zektor#9367</a>
 
                 <img src="../assets/mail.png" class="w-8 h-8 ml-2">
-                <p class="font mono text-sm mt-1 text-white font-bold">dankomajchrak423@gmail.com</p>
+                <a class="font mono text-sm mt-1 text-white font-bold" href="mailto:dankomajchrak423@gmail.com">dankomajchrak423@gmail.com</a>
             </div>
         </div>
     </div>
